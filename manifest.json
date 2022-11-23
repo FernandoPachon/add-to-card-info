@@ -3,17 +3,17 @@
   "name": "add-to-cart-info",
   "version": "0.0.1",
   "title": "Add to cart info",
-  "description": "Componente que mostrara información adicional al realizar una compra",
+  "description": "Componente que da informacion en el cart",
   "builders": {
     "react": "3.x",
     "messages": "1.x",
     "docs": "0.x",
-    "store":"0.x"
+    "store": "0.x"
   },
   "dependencies": {
-    "vtex.checkout-resources":"0.x",
-    "vtex.order-managers":"0.x",
-    "vtex.product-context":"0.x"
+    "vtex.checkout-resources": "0.x",
+    "vtex.order-manager": "0.x",
+    "vtex.product-context": "0.x"
   },
   "registries": [
     "smartcheckout"
