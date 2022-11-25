@@ -1,7 +1,28 @@
 .container {
-  padding: 10px
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 15px;
+  margin: 1;
+  padding: 1rem;
 }
 
-.container__item {
+
+.container_item {
+  margin:1;
   margin-bottom: 1px solid #eee;
+  padding: 1rem;
+  padding-right: 15px;
+  display: flex
+}
+
+.bullet_item--title{
+  color:var(--);
+  font-weight: 700px;
+  font-size: 11px;
+}
+.container--add_to-info{
+  border: solid 1px grey
+}
+.add_to-info{
+  border-bottom: 1px thick grey;
 }

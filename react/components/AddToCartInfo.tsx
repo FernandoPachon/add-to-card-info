@@ -7,6 +7,7 @@ import styles from './styles.css'
 
 const AddToCartInfo = ({ blockClass }: { blockClass: string }) => {
   const container = generateBlockClass(styles.container, blockClass)
+  const total_productos = generateBlockClass(styles.container, blockClass)
   const container_item = generateBlockClass(styles.container_item, blockClass)
   const productInfo = useProduct();
   const { orderForm: {
@@ -22,13 +23,13 @@ const AddToCartInfo = ({ blockClass }: { blockClass: string }) => {
         items.map((item: any, index: number) => {
           console.log(item)
           return (
-            <div key={index} className={container_item}>
+             <div key={index} className={container_item}>
               <div>
                 <img src={item.imageUrls.at1x} />
               </div>
-              <div>
+               <div>
                 <p>{item.name}</p>
-                <p>{item.id}</p>
+                {/* <p>{item.id}</p> */}
                 <p>${item.price / 100}</p>
                 <p>Cant: {item.quantity}</p>
               </div>
@@ -36,11 +37,11 @@ const AddToCartInfo = ({ blockClass }: { blockClass: string }) => {
           )
         })
       }
-      <div>
+      <div className={total_productos}>
         <p> Tienes {items.length} productos en el carrito</p>
-        <p>Total: ${totalizers[0]?.value / 100}</p>
+        {/* <p>Total: ${totalizers[0]?.value / 100}</p> */}
       </div>
-      <ButtonGroup />
+      <ButtonGroup blockClass={blockClass}/>
     </div>
   )
 }
